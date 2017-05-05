@@ -19,25 +19,24 @@ main {
 	align-items: center;
 	flex-direction: column;
 }
+header, article, footer {
+	background-color: 	rgba(255, 255, 255, .3);
+	margin-bottom: 20px;
+}
 h1, h2 {
 	color: #333;
 }
 h1{ font-size: 3.5rem; font-weight: 400}
 h2{ font-size: 2.5rem; font-weight: 400}
-
 footer {
 	height: 50px
 }
-header, article, footer {
-	background-color: 	rgba(255, 255, 255, .3);
-	margin-bottom: 20px;
-}
+
 header {
 	padding: 20px;
 	display: flex;
 	align-items: center;
 	flex: 1;
-	flex-direction: column;
 	width: 60
 }
 img {
