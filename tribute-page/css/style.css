@@ -13,7 +13,7 @@ body {
 	height: 100vh;
 }
 main {
-	padding: 50px 0;
+	padding: 20px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -25,10 +25,9 @@ h1,h2,a {
 a {
 	color: #5c7e29;
 }
-h1{ font-size: 3.5rem}
-h2{ font-size: 2rem}
-h3{ font-size: 1.8rem}
-
+h1{ font-size: 3.5rem }
+h2{ font-size: 2rem }
+h3{ font-size: 1.8rem }
 footer {
 	height: 50px;
 	background-color: 	rgba(255, 255, 255, .3);
@@ -40,7 +39,6 @@ footer {
 	text-align: center;
 
 }
-
 header {
 	background-color: 	rgba(255, 255, 255, .3);
 	padding: 20px;
@@ -60,7 +58,6 @@ img {
 	text-align: justify;
 	font-size: 1.3rem;
 }
-
 article {
 	padding: 20px;
 	display: flex;
@@ -73,7 +70,7 @@ div.panel {
 	width: 300px;
 	padding: 20px; 
 	flex: 1;
-	margin: 10px;
+	margin: 10px 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -87,4 +84,3 @@ div.panel {
 .panel ul li {
 	margin: 15px;
 }
-
