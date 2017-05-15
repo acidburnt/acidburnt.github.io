@@ -19,9 +19,11 @@ main {
 	align-items: center;
 	flex-direction: column;
 }
-h1,h2 {
+h1,h2,a {
 	color: #333;
-
+}
+a {
+	color: #5c7e29;
 }
 h1{ font-size: 3.5rem}
 h2{ font-size: 2rem}
