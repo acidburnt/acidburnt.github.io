@@ -20,7 +20,6 @@ body {
 	height: 100vh;
 	background-color: #999;
 }
-main {}
 .logo {
 	min-width: 100px;
 	height: 100px;
@@ -79,10 +78,21 @@ li > a {
 	font-size: 1.5em;
 	border: solid 2px transparent;
 }
-a:hover {
-	color: #f7df1e;
-	border-bottom: solid 2px #f7df1e;
-}
 a {
-	transition: all .2s;
+	position: relative;
+	animation: unset .15s;
+}
+a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background-color: #f7df1e;
+	transition: all .15s
+}
+a:hover::after {
+	width: 100%;
 }
