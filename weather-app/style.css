@@ -10,6 +10,7 @@ body {
 	/* https://www.toptal.com/designers/subtlepatterns/ */
 	background: url('weather.png');
 	height: 100vh;
+	min-height: 450px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,12 +24,8 @@ justify-content: center;
 align-items: center;
 }
 footer {
-	margin-top: 20px;
-	width: 80%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center
+	text-align: center;
+	padding: 20px;
 }
 p {
 	color: #00464f;
