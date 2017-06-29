@@ -11,6 +11,7 @@ body {
 	background: url('weather.png');
 	height: 100vh;
 	min-height: 450px;
+	/*min-width: 400px;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -31,10 +32,10 @@ p {
 	color: #00464f;
 }
 #user-output h1 {
-	font-size: 3em;
+	font-size: 3rem;
 }
-#user-output p {
-	font-size: 2em;
+#user-output p, #user-output h3 {
+	font-size: 2rem;
 }
 span img {
 	max-width: 100px;
@@ -72,7 +73,7 @@ a, a:visited, a:active {
 	max-width: 600px;
 	height: 50px;
 	line-height: 50px;
-	font-size: 2em;
+	font-size: 1.5rem;
 	padding: 5px;
 	text-align: center;
 	color: #00464f
@@ -82,7 +83,7 @@ a, a:visited, a:active {
 	flex: 2;
 	height: 50px;
 	line-height: 50px;
-	font-size: 2em;
+	font-size: 1.5rem;
 	background-color: #00a7ba;
 	color: #00464f;
 }
