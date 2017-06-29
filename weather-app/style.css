@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+body {
+	/* Background pattern from Subtle Patterns */
+	/* https://www.toptal.com/designers/subtlepatterns/ */
+	background: url('weather.png');
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
+}
+main {
+width: 80%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+footer {
+	margin-top: 20px;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 10px;
+	text-align: center
+}
+p {
+	color: #00464f;
+}
+#user-output h1 {
+	font-size: 3em;
+}
+#user-output p {
+	font-size: 2em;
+}
+span img {
+	max-width: 100px;
+	width: 200%;
+
+}
+a, a:visited, a:active {
+	text-decoration: none;
+	color: #00a7ba;
+}
+#user-output, #user-input {
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+	width: 100%;
+	flex-wrap: wrap;
+	min-width: 435px;
+}
+#user-input {
+	display: flex;
+}
+#user-output {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #00464f
+}
+#user-output *{
+	padding: 5px
+}
+#user-input  #city {
+	flex: 3;
+	max-width: 600px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 2em;
+	padding: 5px;
+	text-align: center;
+	color: #00464f
+}
+#user-input #button {
+	max-width: 200px;
+	flex: 2;
+	height: 50px;
+	line-height: 50px;
+	font-size: 2em;
+	background-color: #00a7ba;
+	color: #00464f;
+}

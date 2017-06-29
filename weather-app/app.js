@@ -1,33 +1,30 @@
-const endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address=olsztyn';
-const API_KEY = 'a42ce931346be3e6e07a4b15350af4bc';
-const darkskyURL = `https://api.darksky.net/forecast/${ API_KEY }/` ;
+const API_KEY = '3628e32ef46a41a89c3155008172906';
+const apiURL = `https://api.apixu.com/v1/current.json?key=${ API_KEY }&q=`;
 
-const options = {
-	method: 'GET',
-	 mode: 'cors',
-	 cache: 'default'
-};
-
-let coords;
-
-fetch( endpoint )
-.then( response => response.json() )
-.then( data => {
-	const location = data.results[ 0 ].geometry.location;
-	coords = {
-		lat: location.lat,
-		lng: location.lng
-	};
-} )
-.catch( err => {
-	console.log( err );
-} );
-function printLink() {
-	console.log( `${ darkskyURL }${ coords.lat },${ coords.lng }` );
-	return `${ darkskyURL }${ coords.lat },${ coords.lng }`;
-}
 function getWeather() {
-	fetch( `${ darkskyURL }${ coords.lat },${ coords.lng }`, options )
-	.then( response => response.json() )
-	.then( data => console.log( data ) );
+	const input = document.getElementById( 'city' ).value.trim();
+	const output = document.getElementById( 'user-output' );
+
+	fetch( apiURL + input )
+	.then( response => {
+		if ( response.status !== 200 ) {
+			const view =
+			'<h1>Oops, could not find this city</h1>\n<p>Try to input something else</p>';
+			output.innerHTML = view;
+			return console.log( 'Bad request, status code: ', response.status );
+		}
+		return response.json();
+	} )
+	.then( data => {
+		console.log( data );
+		const view =
+		`<h1>${ data.location.name }, ${ data.location.country }</h1>
+		<span><img src="${ data.current.condition.icon }" alt="${ data.current.condition.text }" /></span>
+		<p>Temperature: ${ data.current.temp_c } &#8451</p>
+		<p>Wind: ${ data.current.wind_kph } km/h, ${ data.current.wind_dir }</p>
+		<p>Humidity: ${ data.current.humidity } %</p>`;
+		output.innerHTML = view;
+	} );
 }
+const button = document.getElementById( 'button' );
+button.addEventListener( 'click', getWeather, false );
