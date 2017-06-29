@@ -80,7 +80,6 @@ li > a {
 }
 a {
 	position: relative;
-	animation: unset .15s;
 }
 a::after {
 	content: '';
