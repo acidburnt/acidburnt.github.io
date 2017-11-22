@@ -96,15 +96,36 @@ li {
 @media (max-width: 481px) {
   body {
     width: 100%;
+    text-align: initial;
     display: block;
   }
   #page {
     width: 100%;
-
     padding: 10px;
     box-shadow: none;
     display: grid;
+    justify-items: stretch;
     grid-template-columns: 1fr;
-    grid-template-rows: 9 1fr;
+    grid-template-rows: repeat(9, 1fr);
+  }
+  #page > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #page > div > ul,
+  h3 {
+    width: 100%;
+  }
+
+  #skills ul,
+  #hobbies ul,
+  #tools ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #info > p {
+    width: 60%;
   }
 }
