@@ -93,13 +93,14 @@ li {
   margin-left: 10px;
 }
 
-@media (max-width: 481px) {
+@media (max-width: 560px) {
   body {
     width: 100%;
     text-align: initial;
     display: block;
   }
   #page {
+    background-image: url("/dust_scratches.png");
     width: 100%;
     padding: 10px;
     box-shadow: none;
@@ -126,6 +127,7 @@ li {
     align-items: center;
   }
   #info > p {
-    width: 60%;
+    width: 80%;
+    text-align: center;
   }
 }
