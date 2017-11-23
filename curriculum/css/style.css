@@ -80,6 +80,7 @@ li {
   justify-content: center;
   margin-bottom: 5px;
 }
+/* ICONS */
 .skill-ico {
   height: 25px;
   width: 25px;
@@ -100,6 +101,7 @@ li {
     height: 500vh;
     text-align: initial;
     display: block;
+    font-size: 110%;
   }
   #page {
     background-image: url("/dust_scratches.png");
@@ -107,10 +109,17 @@ li {
     width: 100%;
     padding: 0 10px;
     box-shadow: none;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
     justify-items: stretch;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr); */
+  }
+  div {
+    width: 100%;
   }
   #page > div {
     display: flex;
@@ -138,5 +147,19 @@ li {
   }
   #photo > img {
     width: 150px;
+  }
+
+  /* ICONS */
+  .skill-ico {
+    height: 50px;
+    width: 50px;
+  }
+  .star {
+    height: 30px;
+    width: 30px;
+  }
+  .star-container {
+    margin-left: 10px;
+    line-height: 1em;
   }
 }
