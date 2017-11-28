@@ -4,6 +4,7 @@
   box-sizing: border-box;
   text-align: justify;
   list-style-type: none;
+  color: #333355;
 }
 body {
   width: 100%;
@@ -12,26 +13,58 @@ body {
   font-family: "Lato", sans-serif;
   background-color: #eee;
 }
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #1c82cf;
+  transition: all 0.15s;
+}
+a:hover::before {
+  width: 100%;
+}
+ul {
+  width: 100%;
+}
+li {
+  line-height: 1em;
+  margin: 5px;
+}
+h1 {
+  margin-bottom: 0.5em;
+}
+h3 {
+  border-bottom: 1px solid #1c82cf;
+  margin: 5px 0;
+}
+h4 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 #page {
   margin: auto;
   width: 595px;
   height: 842px;
   padding: 10px;
-  /* background-color: rgb(234, 245, 233); */
   background-image: url("/dust_scratches.png");
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.753);
+  box-shadow: 10px 10px 30px #000000c0;
   display: grid;
-  grid-gap: 2px;
+  grid-gap: 5px;
   align-items: start;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: repeat(5, 1fr) 0.5fr;
 }
-#info h1 {
-  margin-bottom: 0.8em;
-}
-#info p {
-  margin-bottom: 0.3em;
-}
+
 #photo img {
   width: 100px;
   /* transform: scaleX(-1); */
@@ -42,44 +75,40 @@ body {
   align-items: center;
 }
 #known-technologies ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 #known-technologies ul li {
   margin: 5px 10px;
 }
-h3 {
-  border-bottom: 1px solid rgb(28, 130, 207);
-  margin: 5px 0;
+#experience ul ul li {
+  list-style-type: initial;
 }
-
-h3 {
-}
-h4 {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.date {
-  color: #777;
-  font-size: 0.8em;
-}
-.more {
-  transform: rotate(90deg) scale(1.2);
-  display: none;
-}
-
-li {
-  line-height: 1em;
-  margin: 5px;
+#experience ul ul {
+  padding-left: 15px;
 }
 #skills > ul > li {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5px;
+}
+#clause {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#clause .faded {
+  font-size: 0.6em;
+}
+.faded {
+  color: #888;
+  font-size: 0.8em;
+}
+
+.more {
+  transform: rotate(90deg) scale(1.2);
+  display: none;
 }
 /* ICONS */
 .skill-ico {
@@ -98,18 +127,25 @@ li {
 @media (max-width: 560px) {
   body {
     width: 100%;
-    height: max-content;
-    height: 500vh;
     text-align: initial;
-    display: block;
     font-size: 110%;
   }
+  h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.3em;
+  }
+  h3 {
+    width: 100%;
+  }
+  h4,
+  li {
+    text-align: left;
+  }
   #page {
-    background-image: url("/dust_scratches.png");
     height: unset;
     width: 100%;
-    padding: 0 10px;
     box-shadow: none;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,10 +157,15 @@ li {
     align-items: center;
     width: 100%;
   }
-  #page > div > ul,
-  h3 {
-    width: 100%;
-    font-size: 150%;
+  #photo img {
+    width: 150px;
+    margin-top: 5px;
+  }
+  #info > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
   }
   #skills ul,
   #hobbies ul,
@@ -135,15 +176,16 @@ li {
   }
   #info,
   #photo {
-    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  #photo > img {
-    width: 170px;
+  #known-technologies ul {
+    grid-template-columns: repeat(2, 1fr);
   }
-
+  #clause {
+    margin-top: 5px;
+  }
   /* ICONS */
   .skill-ico {
     height: 40px;
@@ -156,5 +198,16 @@ li {
   .star-container {
     margin-left: 10px;
     line-height: 1em;
+  }
+}
+@media (max-width: 393px) {
+  #info > ul {
+    font-size: 0.9em;
+  }
+  .faded {
+    min-width: 120px;
+  }
+  h1 {
+    text-align: center;
   }
 }
