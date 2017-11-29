@@ -110,7 +110,6 @@ h4 {
   transform: rotate(90deg) scale(1.2);
   display: none;
 }
-/* ICONS */
 .skill-ico {
   height: 25px;
   width: 25px;
@@ -133,6 +132,7 @@ h4 {
     justify-content: flex-start !important;
   }
 } */
+
 @media (max-width: 560px) {
   body {
     width: 100%;
@@ -194,7 +194,7 @@ h4 {
   #clause {
     margin-top: 5px;
   }
-  /* ICONS */
+
   .skill-ico {
     height: 40px;
     width: 40px;
