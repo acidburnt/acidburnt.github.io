@@ -59,6 +59,8 @@ h4 {
   background-image: url("/dust_scratches.png");
   box-shadow: 10px 10px 30px #000000c0;
   display: grid;
+  display: -ms-grid;
+  display: -ms-inline-grid;
   grid-gap: 5px;
   align-items: start;
   grid-template-columns: 3fr 1fr;
