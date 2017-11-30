@@ -3,6 +3,7 @@
 for FreeCodeCamp purposes
 
 this repo contains:
+
 [résumé / curriculum vitae](https://acidburnt.github.io/curriculum/)
 
 [tribute page for FCC](https://acidburnt.github.io/tribute-page/)
