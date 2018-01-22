@@ -157,7 +157,7 @@ h4 {
   }
 } */
 
-@media (max-width: 560px) {
+@media screen and (max-width: 560px) {
   body {
     width: 100%;
     text-align: initial;
@@ -268,7 +268,7 @@ h4 {
     line-height: 1em;
   }
 }
-@media (max-width: 393px) {
+@media screen and (max-width: 393px) {
   #info > ul {
     font-size: 0.9em;
   }
